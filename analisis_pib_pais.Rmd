@@ -1,0 +1,32 @@
+---
+title: "analisis_pib_pais"
+author: "Fabiana Hidalgo Fallas"
+date: "2023-06-07"
+output: html_document
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(datos)
+library(dplyr)
+```
+
+```{r}
+datos:: paises
+```
+
+```{r}
+glimpse(paises)
+```
+
+```{r}
+paises_pib <- paises
+```
+
+```{r}
+datos_filtrados <- paises_pib |> 
+  filter(continente == "Américas", anio ==2007) |> 
+  select(pais, pib_per_capita) |> 
+  arrange(desc(pib_per_capita))
+```
+
+
