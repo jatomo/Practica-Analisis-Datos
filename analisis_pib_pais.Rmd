@@ -29,4 +29,16 @@ datos_filtrados <- paises_pib |>
   arrange(desc(pib_per_capita))
 ```
 
+```{r}
+library (ggplot2)
+
+```
+
+```{r}
+ ggplot(datos_filtrados, aes(y= pais, x= pib_per_capita)) +
+  geom_bar(stat = "identity")
+```
+
+
+```
 
