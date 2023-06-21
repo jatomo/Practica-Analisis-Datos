@@ -8,6 +8,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 library(datos)
 library(dplyr)
+library(ggplot)
 ```
 
 ```{r}
@@ -29,4 +30,8 @@ datos_filtrados <- paises_pib |>
   arrange(desc(pib_per_capita))
 ```
 
-
+```{r}
+ ggplot(datos_filtrados, aes(y= pais, x= pib_per_capita)) +
+  geom_bar(stat = "identity")
+  
+```
