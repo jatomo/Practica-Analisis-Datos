@@ -187,6 +187,7 @@ con sus compañeras sobre preparación y limpieza de datos:
 
 a. Ajustar los nombres de las columnas a español
 
+
 ```{r}
 datos_hospital_Practica <- datos_hospital_4 |> 
   rename(identificacion = case_id  ,
