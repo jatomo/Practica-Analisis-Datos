@@ -217,7 +217,6 @@ datos_hospital_relevantes <-datos_hospital_Practica  |>
   remove_empty(c( "cols")) |> 
   select (-merged_header, -...20, -fiebre)
 
-
 ```
 
 c. En gender, podemos pasar f y m a palabras (Femenino, Masculino por ejemplo, o ponerlo
