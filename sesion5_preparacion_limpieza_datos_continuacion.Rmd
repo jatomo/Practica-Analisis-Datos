@@ -213,6 +213,8 @@ datos_hospital_Practica <- datos_hospital_4 |>
 b. Eliminar columnas que no proveen información relevante (merged_header y 20..., también
 elimine la columna fever).
 
+
+
 c. En gender, podemos pasar f y m a palabras (Femenino, Masculino por ejemplo, o ponerlo
 en mayúsculas como F y M)
 
