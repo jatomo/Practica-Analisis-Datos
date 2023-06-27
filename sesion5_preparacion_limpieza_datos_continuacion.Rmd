@@ -232,6 +232,18 @@ datos_hospital_cambio <-datos_hospital_relevantes|>
 
 d. Transformar la columna date_of_outcome de carácter a objeto tipo fecha.
 
+```{r}
+datos_hospital_fecha <- datos_hospital_cambio |> 
+  mutate(fecha_del_resultado = dmy(fecha_del_resultado))
+
+```
+
+```{r}
+glimpse(datos_hospital_fecha)
+glimpse(datos_hospital_cambio)
+```
+
+
 e. Revise los valores distintos que hay en la columna hospital. (Ooops! Al hacer esto,
 vemos que hay algo extraño. Al parecer, varios hospitales se escribieron de formas 
 distintas pero parecen ser el mismo. Por ejemplo, Central Hopital y Central Hospital 
