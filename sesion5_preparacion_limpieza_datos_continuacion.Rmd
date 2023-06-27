@@ -222,6 +222,14 @@ datos_hospital_relevantes <-datos_hospital_Practica  |>
 c. En gender, podemos pasar f y m a palabras (Femenino, Masculino por ejemplo, o ponerlo
 en mayúsculas como F y M)
 
+```{r}
+datos_hospital_cambio <-datos_hospital_relevantes|> 
+  mutate(across(genero, function(x) ifelse(x == 'f', 'F', ifelse(x == 'm', 'M', x)))) |> 
+  mutate(across(genero, toupper))
+```
+
+
+
 d. Transformar la columna date_of_outcome de carácter a objeto tipo fecha.
 
 e. Revise los valores distintos que hay en la columna hospital. (Ooops! Al hacer esto,
